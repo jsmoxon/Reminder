@@ -13,3 +13,7 @@ urlpatterns = patterns('',
      url(r'^send_reminder', 'reminders.views.send_a_reminder'),
      url(r'^reminders/', include('reminders.urls')),
 )
+
+urlpatterns += patterns('django.contrib.staticfiles.views',
+    url(r'^static/(?P<path>.*)$', 'serve', kwargs={"insecure": True}),
+)
