@@ -1,0 +1,8 @@
+<h1>List</h1>
+{% for reminder in reminders %}
+<li>{{reminder.title}}</li>
+{% endfor %}
+
+<form action="/send_reminder/" method="get">
+  <input type="submit" value="Send" />
+</form>

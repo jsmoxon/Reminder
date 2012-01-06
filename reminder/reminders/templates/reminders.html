@@ -1,0 +1,7 @@
+{% extends "base/base.html" %}
+{% block content %}
+<h3>{{user.username}}'s Reminders</h3>
+{% for item in reminder_list %}
+<li>{{ item.title }} -- {{item.date_to_remind}} at {{item.time_to_remind}}</li>
+{% endfor %}
+{% endblock content %}

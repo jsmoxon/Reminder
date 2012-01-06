@@ -1,0 +1,15 @@
+{% extends "base/base.html" %}
+{% block content %}
+<form action="" method="post"> 
+  {% csrf_token %}
+  <label for="title">Title:</label>
+  <input type="text" name="title" />
+  <label for="description">Description:</label> 
+  <input type="text" name="description" />
+  <label for="date_to_remind">Date to remind:</label>
+  <input id="datepicker" name="date_to_remind" type="text" />
+  <label for="time_to_remind">Time to remind:</label>
+  <input id="time" name="time_to_remind" type="text" />
+  <input type="submit" value="Add Reminder" />
+</form>
+{% endblock content %}
