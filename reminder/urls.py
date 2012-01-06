@@ -1,8 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
-import django_cron
-django_cron.autodiscover()
 from django.views.generic.simple import direct_to_template
 
 urlpatterns = patterns('',
