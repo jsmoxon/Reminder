@@ -135,7 +135,6 @@ INSTALLED_APPS = (
     'south',
     'djcelery',
     'djkombu',
-    'gunicorn',
 )
 
 # A sample logging configuration. The only tangible logging
