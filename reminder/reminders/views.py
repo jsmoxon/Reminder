@@ -37,17 +37,14 @@ def logout_action(request):
     logout(request)
     return render_to_response('logged_out.html')
 
-def test_reminder():
-    reminder_list = Reminder.objects.filter(active=True)
-    for reminder in reminder_list:
-        reminder.active = False
-        reminder.save()
-
 def send_a_reminder():
+    print "hello, world!"
     now = datetime.datetime.now()
     reminder_list = Reminder.objects.filter(active=True)
+    print reminder_list
     for reminder in reminder_list:
         reminder_datetime = datetime.datetime.combine(reminder.date_to_remind, reminder.time_to_remind)
+        print reminder_datetime
         if reminder_datetime < now:
             subject = reminder.title
             message = str(reminder.date_to_remind)
@@ -59,10 +56,12 @@ def send_a_reminder():
                     "To: %s" % TO,
                     message,
                     ), "\r\n")
+            print body
             send_mail(subject, body, from_email, [TO], fail_silently=False)
+            print "mail sent" 
             reminder.active = False
             reminder.save()
-
+            
 
 def send_reminder(request):
     now = datetime.datetime.now()

@@ -9,6 +9,6 @@ DB_HOST = ''
 DB_PORT =  3306
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT =  587
-EMAIL_HOST_USER = 'remindr.email'
+EMAIL_HOST_USER = 'remindr.email@gmail.com'
 EMAIL_HOST_PASSWORD = 'remindremail'
 EMAIL_USE_TLS = True
