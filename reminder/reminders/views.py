@@ -43,7 +43,7 @@ def test_reminder(user):
     from_email = "remindr.email@gmail.com"
     send_mail(subject, message, from_email, ['jsmoxon@gmail.com'], fail_silently=False)
 
-def send_a_reminder(request):
+def send_a_reminder():
     now = datetime.datetime.now()
     reminder_list = Reminder.objects.filter(active=True)
     for reminder in reminder_list:
@@ -62,7 +62,7 @@ def send_a_reminder(request):
             send_mail(subject, body, from_email, [TO], fail_silently=False)
             reminder.active = False
             reminder.save()
-    return HttpResponse("Thanks!")
+
 
 def send_reminder(request):
     now = datetime.datetime.now()
