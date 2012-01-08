@@ -1,5 +1,3 @@
-from os import environ
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -108,22 +106,24 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+from constants import *
+
 #celery related info
 import djcelery
 djcelery.setup_loader()
-
-CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"  
+BROKER_BACKEND = "djkombu.transport.DatabaseTransport"
 CELERY_RESULT_DBURI = DATABASES['default']
-BROKER_TRANSPORT = 'amqplib'
-BROKER_URL = env('RABBITMQ_URL','')
-CELERY_RESULT_BACKEND = "amqp"
-BROKER_HOST= "127.0.0.1"
-BROKER_PORT= 5672
-BROKER_VHOST = "/"
-BROKER_USER = "guest"
-BROKER_PASSWORD ="guest"
 
-from constants import *
+#CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"  
+#CELERY_RESULT_DBURI = DATABASES['default']
+#CELERY_RESULT_BACKEND = "amqp"
+#BROKER_HOST= "127.0.0.1"
+#BROKER_PORT= 5672
+#BROKER_VHOST = "/"
+#BROKER_USER = "guest"
+#BROKER_PASSWORD ="guest"
+
+
 
 INSTALLED_APPS = (
     'django.contrib.auth',

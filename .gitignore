@@ -1,3 +1,4 @@
 *.pyc
 *.py~
 venv
+celerybeat-schedule.db

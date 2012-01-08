@@ -1,7 +1,7 @@
 DOMAIN = 'localhost:8000'
-ADMIN_UN = 'jmoxon'
+ADMIN_UN = 'jackmoxon'
 ADMIN_UE = ''
-ADMIN_PW = 'chess729'
+ADMIN_PW = 'jm'
 DB_ENGINE = 'sqlite3' # mysql                                                            
 DB_USER = ''
 DB_PASSWORD = ''

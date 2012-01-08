@@ -37,11 +37,11 @@ def logout_action(request):
     logout(request)
     return render_to_response('logged_out.html')
 
-def test_reminder(user):
-    message = user.reminder_set.filter(active=True)
-    subject = user.reminder_set.title
-    from_email = "remindr.email@gmail.com"
-    send_mail(subject, message, from_email, ['jsmoxon@gmail.com'], fail_silently=False)
+def test_reminder():
+    reminder_list = Reminder.objects.filter(active=True)
+    for reminder in reminder_list:
+        reminder.active = False
+        reminder.save()
 
 def send_a_reminder():
     now = datetime.datetime.now()
