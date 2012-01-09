@@ -6,8 +6,9 @@ celery==2.4.6
 django-celery==2.4.2
 django-kombu==0.9.4
 django-picklefield==0.1.9
+django-registration==0.7
+gunicorn==0.12.2
 kombu==1.5.1
 psycopg2==2.4.4
 python-dateutil==1.5
 wsgiref==0.1.2
-gunicorn==0.12.2

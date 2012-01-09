@@ -1,0 +1,12 @@
+<h1>Registration Form</h1>
+            <form method="post" action=""
+                  class="passform">
+              {% csrf_token %}
+              {{form}}
+              <div class="error hide">
+                Choose a password that's 6 or more characters
+              </div>
+              <div class="submit">
+                <input type="submit" value="" class="submit_click">
+              </div>
+            </form>

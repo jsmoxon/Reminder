@@ -12,6 +12,7 @@ urlpatterns = patterns('',
      url(r'^logout_action', 'reminders.views.logout_action'),
      url(r'^send_reminder', 'reminders.views.send_a_reminder'),
      url(r'^reminders/', include('reminders.urls')),
+     url(r'^accounts/', include('registration.urls')),
 )
 
 urlpatterns += patterns('django.contrib.staticfiles.views',
