@@ -14,9 +14,6 @@ from django.views.generic import TemplateView
 from forms import *
 from django.contrib.auth import authenticate, login, logout
 
-def cron_test():
-    send_mail("this is a test of the cron system", "this is only a test", "remindr.email@gmail.com", ['jsmoxon@gmail.com'], fail_silently=False)
-
 def list(request):
     reminders = Reminder.objects.all()
     return render_to_response('list.html', {"reminders":reminders})
@@ -25,11 +22,11 @@ def log_view(request):
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(username=username, password=password)
+    reminder_list = Reminder.objects.filter(person=user, active=True)
     if user is not None:
         if user.is_active:
             login(request, user)
-            return render_to_response("loggedin.html")
-#            return render_to_response('loggedin.html')
+            return render_to_response("reminders.html", {'user':user, 'reminder_list':reminder_list})
         else:
             return HttpResponse('Please submit a valid password')
     else:
