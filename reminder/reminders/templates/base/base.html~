@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="{% get_static_prefix %}css/skeleton.css">
         <link rel="stylesheet" href="{% get_static_prefix %}css/layout.css">
 	<link rel="stylesheet" href="{% get_static_prefix%}css/style.css">
+	
         <!-- Javascript                                                                                                                                               
         ================================================== -->
 </head>
@@ -40,6 +41,7 @@
       <ul>
 	<li><a href="/reminders/home/">Home</a></li>
         <li><a href="/reminders/add/">Add</a></li>
+	<li><a href="/accounts/register/">Create account</a></li>
 	<li><a href="/logout_action/">logout</a></li>
       </ul>
     </div>

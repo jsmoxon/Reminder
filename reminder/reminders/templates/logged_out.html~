@@ -1,0 +1,7 @@
+{% extends "base/base.html" %}                                                   |
+{% block content %}    
+<h4>Logged out successfully</h4>      
+
+
+
+{% endblock content %} 
