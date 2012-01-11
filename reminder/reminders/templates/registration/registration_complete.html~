@@ -1,2 +1,7 @@
-<h1>Registratoin complete</h1>
-<h3>Check your email for instructions for how to activate your account</h3>
+{% extends "base/base.html" %}
+{% block content %}
+
+
+<h4>Registratoin complete</h4>
+<h6>Check your email for instructions for how to activate your account</h6>
+{% endblock content %}
