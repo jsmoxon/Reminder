@@ -1,10 +1,14 @@
-<h1>Remindr</h1>
-<a href="/reminders/home/">Enter</a>
-<h1>Remindr</h1>
-<a href="/reminders/home/">Enter</a>
+{% extends "base/base.html" %}
+
+{% block content %}
+<div id="login_box" class="four columns offset-by-six">
 <form action="/log_view/" method="post">
 {% csrf_token %}
-<input type="text" name="username">Username</input>
-<input type="text" name="password">Password</input>
+<label for="username">username:</label>
+<input class="text_input" type="text" name="username" />
+<head>                                                                           |<label for="username">username:</label>
+<input class="text_input" type="password" name="password" />
 <input type="submit" value="Login" />
 </form>
+</div><!--closes login_box-->
+{% endblock content %}

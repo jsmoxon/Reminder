@@ -1,5 +1,6 @@
 {% extends "base/base.html" %}
 {% block content %}
+<div id="add_reminder" class="eight columns">
 <form action="" method="post"> 
   {% csrf_token %}
   <label for="title">Title:</label>
@@ -9,7 +10,8 @@
   <label for="date_to_remind">Date to remind:</label>
   <input id="datepicker" name="date_to_remind" type="text" />
   <label for="time_to_remind">Time to remind:</label>
-  <input id="time" name="time_to_remind" type="text" default="0:00" />
+  <input id="time" name="time_to_remind" type="text" value="0:00" />
   <input type="submit" value="Add Reminder" />
 </form>
+</div><!--closes add_reminder div-->
 {% endblock content %}

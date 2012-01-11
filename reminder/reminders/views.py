@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from models import *
 from django.core.mail import send_mail, BadHeaderError
@@ -27,7 +28,8 @@ def log_view(request):
     if user is not None:
         if user.is_active:
             login(request, user)
-            return render_to_response('loggedin.html')
+            return render_to_response("loggedin.html")
+#            return render_to_response('loggedin.html')
         else:
             return HttpResponse('Please submit a valid password')
     else:

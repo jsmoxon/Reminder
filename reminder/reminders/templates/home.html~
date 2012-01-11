@@ -6,7 +6,6 @@
 {% csrf_token %}
 <label for="username">username:</label>
 <input class="text_input" type="text" name="username" />
-<label for="username">password:</label>
 <input class="text_input" type="password" name="password" />
 <input type="submit" value="Login" />
 </form>

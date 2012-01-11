@@ -1,17 +1,63 @@
 {% load static %}
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
+
+        <!-- Basic Page Needs                                                                                                                                       
+  ================================================== -->
+        <meta charset="utf-8">
+        <title>Remindr - What's Important?</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!--[if lt IE 9]>                                                                                                                                           
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>                                                                          
+        <![endif]-->
+
+        <!-- Mobile Specific Metas                                                                                                                                  
+  ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- CSS                                                                                                                                                    
+  ================================================== -->
+        <link rel="stylesheet" href="{% get_static_prefix %}css/base.css">
+        <link rel="stylesheet" href="{% get_static_prefix %}css/skeleton.css">
+        <link rel="stylesheet" href="{% get_static_prefix %}css/layout.css">
+	<link rel="stylesheet" href="{% get_static_prefix%}css/style.css">
+        <!-- Javascript                                                                                                                                               
+        ================================================== -->
+</head>
+<body>
+<div id="container" class="container">
+  <div id="header" class="sixteen columns clearfix">
+    <div id="logo" class="six columns alpha">
+    <a href="/"><h1>Remindr</h1></a>
+    <h5>Remindr reminds you of what's important.</h5>
+    </div><!--closes logo div-->
+    <div id="main_links" class="four columns offset-by-six omega">
+      <ul>
+	<li><a href="/reminders/home/">Home</a></li>
+        <li><a href="/reminders/add/">Add</a></li>
+	<li><a href="/logout_action/">logout</a></li>
+      </ul>
+    </div>
+  </div><!--closes header div-->
+  <div id="main" class="sixteen columns clearfix">
+{% block content %}
+{% endblock content %}
+  </div><!--closes main div-->
+  <div id="footer" class="sixteen columns">
+    <a href="/reminders/home/">Home</a>
+    <a href="/reminders/add/">Add</a>
+    <a href="/logout_action/">logout</a>
+  </div><!--closes footer div-->
+</div><!--closes container-->
+<!--js files-->
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script type="text/javascript" src="{% get_static_prefix %}js/test.js"></script>
+  <script type="text/javascript" src="{% get_static_prefix %}js/datepicker.js"></script>
   <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-</head>
-<body>
-<h1>Remindr</h1>
-{% block content %}
-{% endblock content %}
-<a href="/reminders/home/">Home</a>
-<a href="/reminders/add/">Add</a>
-<a href="/logout_action/">logout</a>
 </body>
