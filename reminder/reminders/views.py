@@ -111,7 +111,7 @@ class AddReminderView(CreateView):
     model = Reminder
     form_class = AddReminderForm
     template_name = "add_reminder.html"
-    success_url = "/reminders/success/"
+    success_url = "/reminders/home/"
     def get_form(self, form_class):
         form = super(AddReminderView, self).get_form(form_class)
         form.instance.person = self.request.user
