@@ -8,7 +8,8 @@
   <input type="text" name="description" />
   <label for="date_to_remind">Date to remind:</label>
   <input id="datepicker" name="date_to_remind" type="text" />
-  <input id="time" name="time_to_remind" type="text" />
+  <label for="time_to_remind">Time to remind:</label>
+  <input id="time" name="time_to_remind" type="text" default="0:00" />
   <input type="submit" value="Add Reminder" />
 </form>
 {% endblock content %}
