@@ -3,10 +3,7 @@
                   class="passform">
               {% csrf_token %}
               {{form}}
-              <div class="error hide">
-                Choose a password that's 6 or more characters
-              </div>
               <div class="submit">
-                <input type="submit" value="" class="submit_click">
+                <input type="submit" value="activate" class="submit_click">
               </div>
             </form>

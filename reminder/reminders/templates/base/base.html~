@@ -33,7 +33,7 @@
 <div id="container" class="container">
   <div id="header" class="sixteen columns clearfix">
     <div id="logo" class="six columns alpha">
-    <a href="/"><h1>Remindr</h1></a>
+    <a href="/reminders/home/"><h1>Remindr</h1></a>
     <h5>Remindr reminds you of what's important.</h5>
     </div><!--closes logo div-->
     <div id="main_links" class="four columns offset-by-six omega">

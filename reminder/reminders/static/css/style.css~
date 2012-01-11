@@ -1,3 +1,42 @@
+#container {
+
+}
+
 #header {
-background: blue;
+background: 
+}
+
+#main {
+min-height:400px;
+}
+
+#main_links li{
+display: inline;
+}
+
+#login_box {
+background: 
+}
+
+#reminder_list {
+margin-top:30px;
+margin-bottom:30px;
+}
+
+#add_reminder {
+margin-top:30px;
+background:
+}
+
+.text_input {
+height: 10px;
+}
+
+
+#right {
+background: 
+}
+
+#footer {
+background: 
 }

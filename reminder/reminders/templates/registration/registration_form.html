@@ -1,9 +1,14 @@
-<h1>Registration Form</h1>
+{% extends "base/base.html" %}
+{% block content %}
+<div id="registration_form">
+<h4>Registration Form</h4>
             <form method="post" action=""
                   class="passform">
               {% csrf_token %}
               {{form}}
               <div class="submit">
-                <input type="submit" value="activate" class="submit_click">
+                <input type="submit" value="Register" class="submit_click">
               </div>
             </form>
+</div><!--closes registration_form div-->
+{% endblock content %}

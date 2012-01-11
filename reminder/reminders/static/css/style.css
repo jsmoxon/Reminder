@@ -1,5 +1,6 @@
+{% load static %}
 #container {
-
+background-image:url("{% get_static_prefix %}images/fabric_plaid.png")
 }
 
 #header {
@@ -8,6 +9,7 @@ background:
 
 #main {
 min-height:400px;
+margin-top:30px;
 }
 
 #main_links li{
@@ -19,7 +21,6 @@ background:
 }
 
 #reminder_list {
-margin-top:30px;
 margin-bottom:30px;
 }
 
