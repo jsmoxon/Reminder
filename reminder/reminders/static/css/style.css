@@ -4,13 +4,23 @@ background-image:url("{% get_static_prefix %}images/fabric_plaid.png")
 }
 
 #header {
-background: 
+
 }
+
+.sign_in_bar {
+float: right;
+}
+
+#loginarea input{
+display: inline;
+width:60px;
+font-size:10px;
+}
+
 
 #main {
 min-height:400px;
-margin-top:30px;
-}
+background: ;}
 
 #main_links li{
 display: inline;
@@ -30,11 +40,61 @@ background:
 }
 
 .text_input {
+height: 10px;
 }
 
+#left {
+
+}
+
+#middle {
+
+}
 
 #right {
-background: 
+
+}
+
+#shout {
+text-align: center;
+margin-top: 30px;
+}
+
+.signupbutton {
+margin-top:30px;
+height:40px;
+width:200px;
+background: #22B6E3;
+font-size:26px;
+}
+
+#shout h1 {
+font-size:72px;
+font-family: 'Habibi', serif;
+}
+
+#shout img{
+height:80px;
+
+border: 1px solid black;
+}
+
+#featurebox_div {
+
+}
+
+.featurebox {
+padding:1em;
+min-height:203px;
+margin-top:30px;
+padding:16px;
+border-radius:5px;
+box-shadow:rgba(0,0,0,0.15) 0 2px 4px;
+background: white;
+}
+
+.featurebox img {
+height:60px;
 }
 
 #footer {

@@ -1,14 +1,16 @@
+{% load static %}
 #container {
-
+background-image:url("{% get_static_prefix %}images/fabric_plaid.png")
 }
 
 #header {
-background: 
+
 }
 
 #main {
 min-height:400px;
-}
+margin-top:30px;
+background: ;}
 
 #main_links li{
 display: inline;
@@ -19,7 +21,6 @@ background:
 }
 
 #reminder_list {
-margin-top:30px;
 margin-bottom:30px;
 }
 
@@ -29,12 +30,47 @@ background:
 }
 
 .text_input {
-height: 10px;
 }
 
+#left {
+
+}
+
+#middle {
+
+}
 
 #right {
-background: 
+
+}
+
+#shout {
+text-align: center;
+margin-top: 30px;
+}
+
+#shout img{
+height:80px;
+
+border: 1px solid black;
+}
+
+#featurebox_div {
+
+}
+
+.featurebox {
+padding:1em;
+min-height:203px;
+margin-top:100px;
+padding:16px;
+border-radius:5px;
+box-shadow:rgba(0,0,0,0.15) 0 2px 4px;
+background: white;
+}
+
+.featurebox img {
+height:60px;
 }
 
 #footer {

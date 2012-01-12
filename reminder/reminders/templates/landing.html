@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+  <!-- Basic Page Needs                                                                                                                                      \
+                                                                                                                                                                    
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Remindr - What's Important?</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--[if lt IE 9]>                                                                                                                                          \
+                                                                                                                                                                    
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>                                                                         \
+                                                                                                                                                                    
+        <![endif]-->
+
+  <!-- Mobile Specific Metas                                                                                                                                 \
+                                                                                                                                                                    
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS                                                      
+  ================================================== -->
+        <link href='http://fonts.googleapis.com/css?family=Habibi' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% get_static_prefix %}css/base.css">
+        <link rel="stylesheet" href="{% get_static_prefix %}css/skeleton.css">
+        <link rel="stylesheet" href="{% get_static_prefix %}css/layout.css">
+        <link rel="stylesheet" href="{% get_static_prefix%}css/style.css">
+	<style type="text/css">
+	 body {background-image:url("{% get_static_prefix %}images/exclusive_paper.png")}
+
+	</style>
+
+        <!-- Javascript                                                                                                                                            \
+                                                                                                                                                                    
+        ================================================== -->
+</head>
+<body>
+<div id="container" class="container">
+ <div id="header" class="sixteen columns clearfix">
+   <h5>brought to you buy <a href="http://jackmoxon.com">jackmoxon</a></h5>
+   <div id="loginarea">
+   <form action="/log_view/" method="post" class="sign_in_bar">
+     {% csrf_token %}
+     <input class="text_input" type="text" name="username" value="username"/>
+     <input class="text_input" type="password" name="password" value="password"/>
+     <input type="submit" value="Login" />
+   </form>
+   </div><!--closes login_area div-->
+ </div><!--closes header div-->
+ <div id="main" class="sixteen columns clearfix">
+   <div id="shout" class="ten columns offset-by-three">
+<!--     <img src="http://mixpanel.com/site_media/images/homepage/logo.png"></img>-->
+   <h1>Remindr</h1>
+   <br/><br/>
+   <h3>Remindr reminds you of what's important.</h3>
+   <br/>
+   <h5>Looking for an easy way to remind yourself of the things that are important?<br/>Take that string off your finger and join the millions using reminder everyday.</h5>
+   <button class="signupbutton">Sign Up!</button>
+   </div><!--closes shout div-->
+   <div id="featurebox_div" class="fourteen columns offset-by-one">
+     <div id="left" class="four columns alpha featurebox">
+       <center>
+	 <img src="http://codeyear.com/images/calendar.946750.png"/>
+	 <h4>Click Less!</h4>
+	 <p>Google calendar takes forever. I feel like my hand is going to fall off it's so many clicks.</p>
+       </center>
+     </div><!--closes left div-->
+     <div id="middle" class="four columns featurebox">
+       <center>
+	 <img src="https://encrypted-tbn2.google.com/images?q=tbn:ANd9GcQeWXwOkqumjUQXRmPtAEMTetYHxDM00bT2kJIXer7QUtuQRqzKuw" />
+	 <h4>Snooze!</h4>
+	 <p>Not ready for a reminder? Want to put it off (yet again)? Just reply to your email with the word snooze and it will email you again later.</p>
+       </center>
+
+     </div><!--closes middle div-->
+     <div id="right" class="four columns featurebox">
+       <center>
+	 <img src="https://encrypted-tbn1.google.com/images?q=tbn:ANd9GcRzAir1e4aqSkwlcwZgRwMaA3XaXr4Z8RnUGTZx2tRMZEyhEmIcBQ" />
+	 <h4>Wisdom!</h4>
+	 <p>Opt in to receive periodic reminders of what really matters from great thinkers.</p>
+       </center>
+     </div><!--closes right div-->
+   </div><!--closes featurebox div--> 
+ </div><!--closes main div-->
+ <div id="footer" class="sixteen columns">
+   <h4>footer</h4>
+ </div><!--closes footer div-->
+</div><!--closes container div-->
+
+
+
+</body>
+</html>
