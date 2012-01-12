@@ -1,7 +1,4 @@
 {% load static %}
-#container {
-background-image:url("{% get_static_prefix %}images/fabric_plaid.png")
-}
 
 #header {
 
@@ -20,7 +17,12 @@ font-size:10px;
 
 #main {
 min-height:400px;
-background: ;}
+background: ;
+}
+
+h3 {
+color: #B51700;
+}
 
 #main_links li{
 display: inline;
@@ -57,15 +59,45 @@ height: 10px;
 
 #shout {
 text-align: center;
-margin-top: 30px;
 }
 
-.signupbutton {
+.signupbutton{
+margin-top: 20px;
+background-color:#ee432e;
+background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#ee432e),color-stop(50%,#c63929),color-stop(50%,#b51700),color-stop(100%,#891100));
+background-image:-webkit-linear-gradient(top,#ee432e 0,#c63929 50%,#b51700 50%,#891100 100%);
+background-image:-moz-linear-gradient(top,#ee432e 0,#c63929 50%,#b51700 50%,#891100 100%);
+background-image:-ms-linear-gradient(top,#ee432e 0,#c63929 50%,#b51700 50%,#891100 100%);
+background-image:-o-linear-gradient(top,#ee432e 0,#c63929 50%,#b51700 50%,#891100 100%);
+background-image:linear-gradient(top,#ee432e 0,#c63929 50%,#b51700 50%,#891100 100%);
+border:1px solid #951100;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+-ms-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+-webkit-box-shadow:inset 0 0 0 1px rgba(255,115,100,0.4),0 1px 3px #333;
+-moz-box-shadow:inset 0 0 0 1px rgba(255,115,100,0.4),0 1px 3px #333;
+-ms-box-shadow:inset 0 0 0 1px rgba(255,115,100,0.4),0 1px 3px #333;
+-o-box-shadow:inset 0 0 0 1px rgba(255,115,100,0.4),0 1px 3px #333;
+box-shadow:inset 0 0 0 1px rgba(255,115,100,0.4),0 1px 3px #333;
+color:#fff;
+font:bold 20px "helvetica neue",helvetica,arial,sans-serif;
+line-height:1;
+padding:12px 0 14px 0;
+text-align:center;
+text-shadow:0 -1px 1px rgba(0,0,0,0.8);
+width:150px
+}
+
+/*.signupbutton {
 margin-top:30px;
 height:40px;
 width:200px;
-background: #22B6E3;
+background: #318F38;
+*/
 font-size:26px;
+
 }
 
 #shout h1 {
@@ -97,6 +129,11 @@ background: white;
 height:60px;
 }
 
+#footer li{
+display: inline;
+padding:8px;
+}
+
 #footer {
-background: 
+margin-top:60px;
 }
