@@ -1,8 +1,3 @@
-{% load static %}
-#container {
-background-image:url("{% get_static_prefix %}images/fabric_plaid.png")
-}
-
 #header {
 
 }

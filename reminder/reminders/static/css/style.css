@@ -1,9 +1,3 @@
-{% load static %}
-
-#header {
-
-}
-
 .sign_in_bar {
 float: right;
 }
@@ -26,6 +20,7 @@ color: #B51700;
 
 #main_links li{
 display: inline;
+color:red
 }
 
 #login_box {
@@ -109,10 +104,6 @@ font-family: 'Habibi', serif;
 height:80px;
 
 border: 1px solid black;
-}
-
-#featurebox_div {
-
 }
 
 .featurebox {

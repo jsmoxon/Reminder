@@ -25,7 +25,10 @@
         <link rel="stylesheet" href="{% get_static_prefix %}css/base.css">
         <link rel="stylesheet" href="{% get_static_prefix %}css/skeleton.css">
         <link rel="stylesheet" href="{% get_static_prefix %}css/layout.css">
-	<link rel="stylesheet" href="{% get_static_prefix%}css/style.css">
+	<link rel="stylesheet" href="{% get_static_prefix %}css/style.css">
+        <style type="text/css">
+         body {background-image:url("{% get_static_prefix %}images/exclusive_paper.png")}
+        </style>
 	
         <!-- Javascript                                                                                                                                               
         ================================================== -->
@@ -48,16 +51,25 @@
 	<li><a href="/">Login</a></li>
 {% endif %}
       </ul>
-    </div>
+    </div><!--closes main_links div-->
   </div><!--closes header div-->
   <div id="main" class="sixteen columns clearfix">
 {% block content %}
 {% endblock content %}
   </div><!--closes main div-->
   <div id="footer" class="sixteen columns">
-    <a href="/reminders/home/">Home</a>
-    <a href="/reminders/add/">Add</a>
-    <a href="/logout_action/">logout</a>
+    <div id="main_links" class="six columns offset-by-six omega">
+      <ul>
+        <li><a href="/reminders/home/">Home</a></li>
+        <li><a href="/reminders/add/">Add</a></li>
+        <li><a href="/accounts/register/">Create account</a></li>
+{% if user.is_authenticated %}
+        <li><a href="/logout_action/">Logout</a></li>
+{% else %}
+        <li><a href="/">Login</a></li>
+{% endif %}
+      </ul>
+    </div><!--closes main_links div-->
   </div><!--closes footer div-->
 </div><!--closes container-->
 <!--js files-->

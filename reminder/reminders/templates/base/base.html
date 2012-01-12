@@ -25,7 +25,10 @@
         <link rel="stylesheet" href="{% get_static_prefix %}css/base.css">
         <link rel="stylesheet" href="{% get_static_prefix %}css/skeleton.css">
         <link rel="stylesheet" href="{% get_static_prefix %}css/layout.css">
-	<link rel="stylesheet" href="{% get_static_prefix%}css/style.css">
+	<link rel="stylesheet" href="{% get_static_prefix %}css/style.css">
+        <style type="text/css">
+         body {background-image:url("{% get_static_prefix %}images/exclusive_paper.png")}
+        </style>
 	
         <!-- Javascript                                                                                                                                               
         ================================================== -->
@@ -34,7 +37,7 @@
 <div id="container" class="container">
   <div id="header" class="sixteen columns clearfix">
     <div id="logo" class="six columns alpha">
-    <a href="/reminders/home/"><h1>Remindr</h1></a>
+    <a href="/"><h1>Remindr</h1></a>
     <h5>Remindr reminds you of what's important.</h5>
     </div><!--closes logo div-->
     <div id="main_links" class="four columns offset-by-six omega">
@@ -55,7 +58,7 @@
 {% endblock content %}
   </div><!--closes main div-->
   <div id="footer" class="sixteen columns">
-    <div id="main_links" class="four columns offset-by-six omega">
+    <div id="main_links" class="six columns offset-by-six omega">
       <ul>
         <li><a href="/reminders/home/">Home</a></li>
         <li><a href="/reminders/add/">Add</a></li>
