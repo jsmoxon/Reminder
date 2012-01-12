@@ -6,7 +6,7 @@ from django.views.generic.simple import direct_to_template
 urlpatterns = patterns('',
      url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
      url(r'^admin/', include(admin.site.urls)),
-     url(r'^$', direct_to_template, {'template': 'home.html'}),
+     url(r'^$', direct_to_template, {'template': 'landing.html'}),
      url(r'^landing', direct_to_template, {'template': 'landing.html'}),
      url(r'^list/', 'reminders.views.list'),
      url(r'^log_view', 'reminders.views.log_view'),
