@@ -5,6 +5,9 @@ $(document).ready(function() {
 		    //    $(this).parent('form').submit(); no longer working but illustrative
 		}//closes onselect function
 	    });//closes datepicker
+	$('.signupbutton').click(function() {
+		window.open('http://www.theuntappedsource.com/results.php?category=422');
+	    });
     });
 
 //var date = $('#datepicker').datepicker({ dateFormat: 'yy-mm-dd'});
