@@ -4,6 +4,7 @@ reply_email = '14af7a6e3133f0079033@cloudmailin.net'
 
 def create_post(**message):
     author = User.objects.get(email=message['from'])
+    print author
     title = message['subject']
     content = message['plain']
 
@@ -12,7 +13,7 @@ def create_post(**message):
         title = title, 
         content = content,
     )
-
+    print p
     send_mail (
         subject='New post created',
         message = content,
@@ -20,5 +21,5 @@ def create_post(**message):
         recipient_list=[message['from']],
         fail_silently=True
     )
-        
+    print p, author, subject
                               
