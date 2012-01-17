@@ -20,7 +20,7 @@ urlpatterns = patterns('',
 mail_handler = MailHandler()
 mail_handler.register_address(
     address='14af7a6e3133f0079033@cloudmailin.net',
-    secret='1966e09d704fd149bd60'
+    secret='1966e09d704fd149bd60',
     callback=my_callback_function
 )
 
