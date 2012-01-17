@@ -1,5 +1,7 @@
 from reminder.constants import EMAIL_HOST_USER
 
+reply_email = '14af7a6e3133f0079033@cloudmailin.net'
+
 def create_post(**message):
     author = User.objects.get(email=message['from'])
     title = message['subject']
@@ -14,7 +16,7 @@ def create_post(**message):
     send_mail (
         subject='New post created',
         message = content,
-        from_email = EMAIL_HOST_USER,
+        from_email = reply_email,
         recipient_list=[message['from']],
         fail_silently=True
     )
