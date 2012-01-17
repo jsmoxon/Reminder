@@ -21,14 +21,12 @@ mail_handler = MailHandler()
 mail_handler.register_address(
     address='14af7a6e3133f0079033@cloudmailin.net',
     secret='1966e09d704fd149bd60',
-    callback=create_post
+    callback=create_post,
 )
 
 urlpatterns += patterns('',
      url(r'^cloudmailin/$', mail_handler),
 )
-
-
 
 urlpatterns += patterns('django.contrib.staticfiles.views',
     url(r'^static/(?P<path>.*)$', 'serve', kwargs={"insecure": True}),
