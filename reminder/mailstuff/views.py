@@ -18,7 +18,7 @@ def create_post(**message):
         subject='New post created',
         message = content,
         from_email = reply_email,
-        recipient_list=['jsmoxon@gmail.com']
+        recipient_list=['jsmoxon@gmail.com'],
         fail_silently=True
     )
     print p, author, subject
