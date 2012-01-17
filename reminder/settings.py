@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     'gunicorn',
     'registration',
     'cloudmailin',
+    'mailstuff',
 )
 
 ACCOUNT_ACTIVATION_DAYS = 7
