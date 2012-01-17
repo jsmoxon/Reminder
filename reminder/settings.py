@@ -141,6 +141,7 @@ INSTALLED_APPS = (
     'djkombu',
     'gunicorn',
     'registration',
+    'cloudmailin',
 )
 
 ACCOUNT_ACTIVATION_DAYS = 7

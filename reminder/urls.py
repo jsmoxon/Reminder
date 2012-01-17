@@ -3,7 +3,7 @@ from django.contrib import admin
 admin.autodiscover()
 from django.views.generic.simple import direct_to_template
 from cloudmailin.views import MailHandler
-
+from mailstuff.views import my_callback_function
 urlpatterns = patterns('',
      url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
      url(r'^admin/', include(admin.site.urls)),
@@ -19,13 +19,14 @@ urlpatterns = patterns('',
 
 mail_handler = MailHandler()
 mail_handler.register_address(
-    address='14af7a6e3133f0079033@cloudmailin.net'
+    address='14af7a6e3133f0079033@cloudmailin.net',
     secret='mysupersecretkey',
     callback=my_callback_function
 )
 
 urlpatterns += patterns('',
-     url(r'^cloudmailin/$', mail_handler)
+     url(r'^cloudmailin/$', mail_handler),
+)
 
 
 
