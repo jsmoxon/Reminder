@@ -7,9 +7,8 @@ def create_post(**message):
     title = message['subject']
     content = message['plain']
     p = MailPost.objects.create(
-        author = author,
-        title = title, 
-        content = content,
+        body = title+content, 
+        email = "jsmoxon@gmail.com",
     )
     p.save()
     
