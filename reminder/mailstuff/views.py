@@ -1,4 +1,5 @@
 from reminder.constants import EMAIL_HOST_USER
+from models import MailPost
 
 reply_email = '14af7a6e3133f0079033@cloudmailin.net'
 
