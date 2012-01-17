@@ -102,8 +102,6 @@ font-family: 'Habibi', serif;
 
 #shout img{
 height:80px;
-
-border: 1px solid black;
 }
 
 .featurebox {
