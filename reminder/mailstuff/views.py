@@ -4,18 +4,14 @@ from models import MailPost
 reply_email = '14af7a6e3133f0079033@cloudmailin.net'
 
 def create_post(**message):
-    title = message['subject']
-    content = message['plain']
-    p = MailPost.objects.create(
-        body = title,
-        email = "jsmoxon@gmail.com"
-    )
-    p.save()
+    subject = message['subject']
+    body = message['plain']
+    MailPost(body=body, email=email).save()
     
     send_mail (
         subject='New post created',
         message = content,
-        from_email = reply_email,
+        from_email = 'jsmoxon@gmail.com',
         recipient_list=['jsmoxon@gmail.com'],
         fail_silently=True
     )
